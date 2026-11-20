@@ -6,8 +6,6 @@ An open, immediately accessible **interactive personal medical profile & emergen
 
 👉 **[Open Live Demo on Vercel](https://medprofil-template.vercel.app/)**
 
-![MedProfil Preview](./public/preview.png)
-
 ## Features
 
 - **Instant Public Access:** Opens straight into the interactive profile dashboard with zero authentication or PIN barriers.
@@ -27,27 +25,60 @@ An open, immediately accessible **interactive personal medical profile & emergen
 
 ## Project Structure
 
-```text
-├── index.html                      # HTML entry & Google Fonts
-├── public/
-│   └── preview.png                 # Dashboard preview screenshot
-├── src/
-│   ├── main.tsx                    # React entry point
-│   ├── index.css                   # Tailwind CSS v4 tokens & @media print styles
-│   ├── App.tsx                     # Workspace shell, sidebar, top bar & routing
-│   ├── i18n/
-│   │   └── translations.ts         # Multi-language dictionary (default: English)
-│   ├── types/
-│   │   └── profile.ts              # Strongly-typed MedicalProfile interfaces
-│   ├── data/
-│   │   └── demoProfile.ts          # 100% fictional default English demo dataset
-│   ├── hooks/
-│   │   └── useMedicalProfile.ts    # Browser-local CRUD state & JSON import/export
-│   └── components/
-│       ├── LanguageDropdown.tsx    # Vector-flag worldwide language selector
-│       ├── CharacterAvatars.tsx    # Custom animated SVG mascot & role avatars
-│       ├── VitalWaveform.tsx       # Heart-rate-synced SVG ECG animation
-│       ├── OverviewView.tsx        # Bento dashboard overview
-│       ├── SectionViews.tsx        # Emergency, Meds, Allergies, Labs & Contacts views
-│       ├── ProfileModals.tsx       # Inline editing, export/print & reset modals
-│       └── EmergencyPrintSheet.tsx #
+    ├── index.html                      # HTML entry & Google Fonts
+    ├── src/
+    │   ├── main.tsx                    # React entry point
+    │   ├── index.css                   # Tailwind CSS v4 tokens & @media print styles
+    │   ├── App.tsx                     # Workspace shell, sidebar, top bar & routing
+    │   ├── i18n/
+    │   │   └── translations.ts         # Multi-language dictionary (default: English)
+    │   ├── types/
+    │   │   └── profile.ts              # Strongly-typed MedicalProfile interfaces
+    │   ├── data/
+    │   │   └── demoProfile.ts          # 100% fictional default English demo dataset
+    │   ├── hooks/
+    │   │   └── useMedicalProfile.ts    # Browser-local CRUD state & JSON import/export
+    │   └── components/
+    │       ├── LanguageDropdown.tsx    # Vector-flag worldwide language selector
+    │       ├── CharacterAvatars.tsx    # Custom animated SVG mascot & role avatars
+    │       ├── VitalWaveform.tsx       # Heart-rate-synced SVG ECG animation
+    │       ├── OverviewView.tsx        # Bento dashboard overview
+    │       ├── SectionViews.tsx        # Emergency, Meds, Allergies, Labs & Contacts views
+    │       ├── ProfileModals.tsx       # Inline editing, export/print & reset modals
+    │       └── EmergencyPrintSheet.tsx # Dedicated A4 clinical print layout
+    └── vite.config.ts                  # Static Vite build config
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+ and npm
+
+### Run Locally
+
+    git clone [https://github.com/lx85-dev/medprofil-template.git](https://github.com/lx85-dev/medprofil-template.git)
+    cd medprofil-template
+    npm install --legacy-peer-deps
+    npm run dev
+
+Open `http://localhost:5173` in your browser.
+
+### Build for Production (Static Hosting)
+
+    npm run build
+
+The production bundle is generated in `dist/` and can be deployed directly to **Vercel**, **GitHub Pages**, **Netlify**, or **Cloudflare Pages** as a pure static frontend (no backend or `/api` directory required).
+
+## Customizing Default Demo Data
+
+To change the default profile shown to new visitors, edit `src/data/demoProfile.ts`. Keep public repositories free of real personal health data.
+
+## Privacy & Medical Disclaimer
+
+- This repository contains **100% fictional placeholder data** (`Alex Morgan (Demo)` and sample values).
+- All user edits stay strictly in browser `localStorage` unless manually exported by the user.
+- **Not a certified electronic medical record (EMR).** Always verify critical medical information with qualified healthcare professionals.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information. Created by [@lx85-dev](https://github.com/lx85-dev).
