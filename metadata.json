@@ -1,0 +1,6 @@
+{
+  "name": "MedProfil Template",
+  "description": "Public, interactive personal medical profile and emergency summary template with live in-browser editing, animated vector characters, and print/JSON export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
