@@ -56,7 +56,7 @@ An open, immediately accessible **interactive personal medical profile & emergen
 
 ### Run Locally
 
-    git clone [https://github.com/lx85-dev/medprofil-template.git](https://github.com/lx85-dev/medprofil-template.git)
+    git clone https://github.com/lx85-dev/medprofil-template.git
     cd medprofil-template
     npm install --legacy-peer-deps
     npm run dev
